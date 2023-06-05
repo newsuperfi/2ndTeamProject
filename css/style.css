@@ -161,11 +161,26 @@ section {
   padding: 40px 0;
 }
 
-#movie-review input, #movie-review textarea {
+ #movie-review textarea {
   border-radius: 5px;
   margin: 5 20px;
   width: 260px;
 }
+#movie-review input {
+  width: 122px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#movie-review > div {
+  text-align: center;
+}
+
+#movie-review button {
+  width: 100px;
+  height: 25px;
+}
+
 
 .comment {
   background-color: lightgray;
