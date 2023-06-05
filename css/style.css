@@ -156,21 +156,30 @@ section {
   margin: 20px;
   width: 300px;
   background-color: white;
-  box-shadow: 10px 10px 20px lightgray;
-  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgb(102, 119, 172);
+  border-radius: 15px;
   padding: 40px 0;
 }
 
-#movie-review input, #movie-review textarea {
-  border-radius: 5px;
+#movie-review textarea {
+  border-radius: 6px;
   margin: 5 20px;
   width: 260px;
+  height: 35px;
+  text-align: center;
 }
 
-.comment {
-  background-color: lightgray;
+#movie-review > div {
+  text-align: center;
+}
+#movie-review input {
+  width: 120px;
   border-radius: 5px;
+  margin: 10px;
+}
+.comment {
+  background-color: rgb(117, 117, 168);
+  border-radius: 6px;
   padding: 5px;
   margin: 20px;
-  
 }
