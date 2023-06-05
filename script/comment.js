@@ -24,7 +24,6 @@ export const comment_button = (id) => {
     window.localStorage.setItem(`${id}_comment`, JSON.stringify(movieid_comment))
   }
   show_details(id);
-  
 }
 
 export const show_comment = (id) => {
