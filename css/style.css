@@ -167,18 +167,26 @@ section {
   width: 260px;
   height: 35px;
   text-align: center;
+  border-width: 2px;
+
 }
 
 #movie-review > div {
   text-align: center;
 }
 #movie-review input {
-  width: 120px;
+  width: 117px;
   border-radius: 5px;
   margin: 10px;
 }
+
+#movie-review input:hover{
+  background-color: rgb(221, 223, 224);
+  border-width: 3px;
+}
+
 .comment {
-  background-color: rgb(117, 117, 168);
+  background-color: rgb(203, 206, 218);
   border-radius: 6px;
   padding: 5px;
   margin: 20px;
