@@ -17,7 +17,7 @@ export const show_popular = () => {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
+      console.log(data);
       let movies = data["results"];
 
       let temp_html = movies.map((result, i) => {
@@ -29,11 +29,11 @@ export const show_popular = () => {
         let poster_path = "https://image.tmdb.org/t/p/w400" + poster;
         // img 태그에는 이미지 클릭 시 해당 영화의 id를 alert해주는 onClick이벤트 추가
         return `<div class="movie-content">
-                       <img src="${poster_path}" onclick="show_details('${id}')" id="movie-poster">
-                       <div class="movie-title">${title}</div>
-                       <div class="movie-vote">평점 : ${vote}</div>
-                       <div class="movie-overview">${overview}</div>
-                       </div>`;
+                         <img src="${poster_path}" onclick="show_details('${id}')" id="movie-poster">
+                         <div class="movie-title">${title}</div>
+                         <div class="movie-vote">평점 : ${vote}</div>
+                         <div class="movie-overview">${overview}</div>
+                         </div>`;
       });
       // join 메서드로 배열의 내용물을 문자열로 모아줌
       // 반복문이 종료된 이후 innerHTML에 모아진 내용물을 <div id='#movie-list'> 내부에 넣어줌
@@ -41,4 +41,3 @@ export const show_popular = () => {
     })
     .catch((err) => console.error(err));
 };
-    
