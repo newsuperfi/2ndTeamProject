@@ -186,6 +186,21 @@ section {
   border-radius: 5px;
   margin: 5px;
 }
+#movie-review input {
+  width: 122px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#movie-review > div {
+  text-align: center;
+}
+
+#movie-review button {
+  width: 100px;
+  height: 25px;
+}
+
 
 #movie-review > div {
   text-align: center;
