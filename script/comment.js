@@ -34,3 +34,10 @@ export const show_comment = (id) => {
   });
   document.querySelector('#movie-review').innerHTML = temp_html
 }
+
+export const modify_comment = (id, name) => {
+  let movieid_comment = JSON.parse(window.localStorage.getItem(`${id}_comment`))
+  movieid_comment.forEach((comment) => {
+    comment.includes
+  })
+}
