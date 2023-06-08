@@ -54,6 +54,7 @@ export const show_details = (id) => {
                     <input id="comment-name" type="text" name="name" placeholder="닉네임">
                     <input id="comment-pwd" type="password" name="pwd" placeholder="비밀번호">
                     <textarea id="comment-body" placeholder="한 줄 평을 입력해 주세요"></textarea>
+                    </div>
                     <button onclick="comment_button('${id}')">작성
                     </div>
                     </div>
