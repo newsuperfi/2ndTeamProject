@@ -2,13 +2,16 @@ import { show_details } from "./movieDetail.js";
 import { show_popular } from "./movieList.js";
 import { search_movie } from "./movieSearch.js";
 import { comment_button } from "./comment.js";
-import { comment_delete } from "./deleteComment.js"
+import { comment_delete } from "./deleteComment.js";
 
-  
 // 페이지 로드 완료 시 show_popular 함수를 통해 인기 영화 리스트를 불러와서 화면에 띄워주는 코드
 
-
 window.comment_delete = comment_delete;
+import { practiceApi } from "./komovie.js";
+
+// 페이지 로드 완료 시 show_popular 함수를 통해 인기 영화 리스트를 불러와서 화면에 띄워주는 코드
+
+window.practiceApi = practiceApi;
 window.show_details = show_details;
 window.search_movie = search_movie;
 window.comment_button = comment_button;
@@ -20,7 +23,7 @@ const on_key_up = (event) => {
 
 // keyword라는 id를 갖고있는 input태그에 keyup 이벤트 발생 시 사용할 이벤트핸들러 on_key_up 할당
 document.querySelector("#keyword").addEventListener("keyup", on_key_up);
-
+document.querySelector(".korea").addEventListener("click", practiceApi);
 document.addEventListener("DOMContentLoaded", () => {
   show_popular();
 });
