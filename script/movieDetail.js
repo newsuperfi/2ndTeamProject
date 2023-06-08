@@ -4,6 +4,7 @@ import { comment_button } from './comment.js'
 // 라우터 구성이 되어있지 않기때문에 페이지 내의 데이터를 갈아 끼우는 방식으로 구현
 // 따라서 새로고침 시 첫 화면으로 이동, 뒤로가기 불가
 export const show_details = (id) => {
+  console.log(show_details)
   const options = {
     method: "GET",
     headers: {
@@ -41,25 +42,55 @@ export const show_details = (id) => {
                         </div>
                         <div id="movie-review">`;
 
-
+// <button onclick="localStorage.clear(); window.location.reload()">삭제
+// <input id="comment-pwd" type="password" name="pwd" placeholder="비밀번호"></input>
       let movieid_comment = JSON.parse(window.localStorage.getItem(`${id}_comment`))
       if (movieid_comment) {
+        
+
         movieid_comment.forEach((comment) => {
-          temp_html = temp_html + `<div class="comment">${comment['comment']} - ${comment['name']}님</div>`
+
+
+          // <script>
+          // document.getElementById("delButton").onclick = function () {
+          //   alert("Hello World");
+          // };
+          // </script>
+          temp_html = temp_html + `
+          <div class="comment">${comment['comment']} - ${comment['name']}님
+          <button onclick id="delButton(param)">삭제</button>
+          </div>
+          `
+          ;
+
         });
       }
+      
 
-      temp_html = temp_html + `<div>
-                    <div>
+      temp_html = temp_html + `<div id="comment_list">
                     <input id="comment-name" type="text" name="name" placeholder="닉네임">
                     <input id="comment-pwd" type="password" name="pwd" placeholder="비밀번호">
                     <textarea id="comment-body" placeholder="한 줄 평을 입력해 주세요"></textarea>
-                    </div>
                     <button onclick="comment_button('${id}')">작성
-                  </div>
-                </div>`;
+                    </div>`;
+                    console.log(temp_html)
       movie_list.innerHTML = temp_html;
     })
     .catch((err) => console.error(err));
+
+    // const delete = document.getElementById("delButton");
+
+    // delete.addEventListener('click', () => {
+    // document.body.style.backgroundColor = 'red';
+    // });
+ 
 };
 
+show_details(321)
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const deleteButton = document.getElementById("delButton");
+//   deleteButton.addEventListener('click', () => {
+//   document.body.style.backgroundColor = 'red'
+//   })
+// })

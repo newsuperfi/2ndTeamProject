@@ -1,8 +1,18 @@
+// const newID_LS = 'newID'
+// let newID = []
+
 export const comment_button = (id) => {
   const comment_name = document.querySelector('#comment-name').value;
   const comment_pwd = document.querySelector('#comment-pwd').value;
-  const comment_body = document.querySelector('#comment-body').value;   
-
+  const comment_body = document.querySelector('#comment-body').value; 
+  // const newID = newID.length + 1
+  
+  //function delcmt(event){
+  // const btn = event.target
+  // div = btn.parentNode
+  // 
+  // }
+  
   const comment_init = [];
   const temp_comment = {
     name: comment_name,
@@ -24,6 +34,7 @@ export const comment_button = (id) => {
     window.localStorage.setItem(`${id}_comment`, JSON.stringify(movieid_comment))
   }
   show_details(id);
+  
 }
 
 export const show_comment = (id) => {
