@@ -56,7 +56,8 @@ export const show_details = (id) => {
                     <textarea id="comment-body" placeholder="한 줄 평을 입력해 주세요"></textarea>
                     </div>
                     <button onclick="comment_button('${id}')">작성
-                  </div>
+                    </div>
+                    </div>
                 </div>`;
       movie_list.innerHTML = temp_html;
     })
