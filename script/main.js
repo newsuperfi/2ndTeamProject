@@ -2,12 +2,13 @@ import { show_details } from "./movieDetail.js";
 import { show_popular } from "./movieList.js";
 import { search_movie } from "./movieSearch.js";
 import { comment_button } from "./comment.js";
-    
+import { comment_delete } from "./deleteComment.js"
+
   
 // 페이지 로드 완료 시 show_popular 함수를 통해 인기 영화 리스트를 불러와서 화면에 띄워주는 코드
 
 
-
+window.comment_delete = comment_delete;
 window.show_details = show_details;
 window.search_movie = search_movie;
 window.comment_button = comment_button;

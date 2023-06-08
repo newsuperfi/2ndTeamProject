@@ -34,12 +34,22 @@ header > div > div > a {
   font-size: 25px;
   border-radius: 10px;
   text-align: center;
+  border-width: 3px;
+}
+
+.search-button:hover {
+  background-color: rgb(73, 75, 76);
+  border-width: 3px;
 }
 
 #keyword {
   width: 400px;
 }
 
+/* 영화 검색창 클릭 시 테두리가 흰색으로 바뀌게 끔 하려했음. */
+#keyword input:focus{
+  color: white;
+}
 
 #search {
   margin-bottom: 40px;
@@ -68,7 +78,7 @@ section {
   text-align: center;
   font-size: 20px;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px lightgray;
+  box-shadow: 5px 5px 15px rgb(102, 119, 172);
 
 }
 
@@ -82,7 +92,7 @@ section {
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  box-shadow: 10px 10px 20px lightgray;
+  box-shadow: 10px 10px 20px rgb(102, 119, 172);
 }
 
 #movie-poster {
@@ -156,15 +166,25 @@ section {
   margin: 20px;
   width: 300px;
   background-color: white;
-  box-shadow: 10px 10px 20px lightgray;
-  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgb(102, 119, 172);
+  border-radius: 15px;
   padding: 40px 0;
 }
+
 
  #movie-review textarea {
   border-radius: 5px;
   margin: 5 20px;
   width: 260px;
+  height: 35px;
+  text-align: center;
+  border-width: 2px;
+
+}
+#movie-review input {
+  width: 122px;
+  border-radius: 5px;
+  margin: 5px;
 }
 #movie-review input {
   width: 122px;
@@ -182,10 +202,33 @@ section {
 }
 
 
-.comment {
-  background-color: lightgray;
+#movie-review > div {
+  text-align: center;
+}
+
+#movie-review button {
+  width: 100px;
+  height: 25px;
+}
+
+
+#movie-review > div {
+  text-align: center;
+}
+#movie-review input {
+  width: 117px;
   border-radius: 5px;
+  margin: 10px;
+}
+
+#movie-review input:hover{
+  background-color: rgb(221, 223, 224);
+  border-width: 3px;
+}
+
+.comment {
+  background-color: rgb(203, 206, 218);
+  border-radius: 6px;
   padding: 5px;
   margin: 20px;
-  
 }
