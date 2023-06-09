@@ -1,4 +1,4 @@
-export const practiceApi = () => {
+export const koficApi = () => {
   //document.querySelector(".mycards").innerHTML =
   let today = new Date();
   let year = today.getFullYear();
@@ -13,32 +13,25 @@ export const practiceApi = () => {
   )
     .then((res) => res.json())
     .then((data) => {
-      let temp_html = "";
+      let temp_html = `<div class="koBoxOffice">
+                        <h1>국내 박스오피스 TOP 10</h1>
+                        <table class="boxOfficeTable">
+                        <TR>
+                        <TD class="rank">순위</TD><TD class="tableTitle">TITLE</TD><TD class="tableTitle">개봉일</TD><TD class="tableTitle">누적관객수</TD>`;
       console.log(data);
       const boxOfficeData = data["boxOfficeResult"]["dailyBoxOfficeList"];
       console.log(data);
       //배열안에있는 원소를 value로 한개씩 뽑아서 아래로 보내준다
       boxOfficeData.forEach((valuech) => {
         temp_html +=
-          //`<div>${value.movieNm}</div>
-          // <div>${value.rank}</div>
-          // <div>${value.openDt}</div>
-          // <div>${value.rnum}</div>`;
-          ` <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">${valuech.movieNm}</h5>
-            <p class="card-text">${valuech.openDt}</p>
-            <p class="mycomment">${valuech.rank}</p>
-          </div>
-        </div>
-      </div>
-    </div>`;
+          `<TR>
+            <TD class="rank">${valuech.rank}</TD><TD>${valuech.movieNm}</TD><TD>${valuech.openDt}</TD><TD class="audience">${valuech.audiAcc}(명)</TD>`;
       });
-      console.log(temp_html);
+      
+      temp_html += `</table></div>`
       //명령을 내릴 대상지정
       document.querySelector("#movie-list").innerHTML = temp_html;
     });
   // });
 };
-document.querySelector(".korea").addEventListener("click", practiceApi);
+document.querySelector(".korea").addEventListener("click", koficApi);

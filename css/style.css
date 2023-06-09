@@ -28,11 +28,16 @@ header > div > div > a {
 }
 
 #keyword,
-.search-button {
+.search-button, .korea{
   height: 40px;
   font-size: 25px;
   border-radius: 10px;
   text-align: center;
+  border-width: 3px;
+}
+
+.korea:hover {
+  background-color: rgb(73, 75, 76);
   border-width: 3px;
 }
 
@@ -225,9 +230,40 @@ section {
   padding: 5px;
   margin: 20px;
 }
+
+.koBoxOffice {
+  text-align: center;
+  font-size: 50px;
+}
+
+.koBoxOffice h1 {
+  margin: 20px auto;
+}
+
+.boxOfficeTable {
+  font-size: 30px;  
+}
+
+.boxOfficeTable td{
+  margin: 10px;  
+  padding: 15px;
+  background-color: lightgray;
+}
+
+.boxOfficeTable .rank{
+  text-align: center;
+  
+}
+
+.tableTitle {
+  text-align: center;
+}
+.audience {
+  text-align: right;
+}
+
 .korea {
   background-color: rgb(221, 220, 220);
-  box-shadow: 10px 10px 10px rgb(116, 116, 116);
 }
 .card-body {
   background-color: rgb(153, 152, 160);
