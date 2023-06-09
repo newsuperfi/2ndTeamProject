@@ -9,7 +9,7 @@ export const koficApi = () => {
   }`;
   console.log(formattedDate);
   fetch(
-    `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=9eca89007c1564aef0ddab2d14639acc&targetDt=${formattedDate}`
+    `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=9eca89007c1564aef0ddab2d14639acc&targetDt=${formattedDate}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -34,4 +34,4 @@ export const koficApi = () => {
     });
   // });
 };
-document.querySelector(".korea").addEventListener("click", koficApi);
+
