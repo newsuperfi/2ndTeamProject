@@ -1,4 +1,5 @@
-import { comment_button } from "./comment.js";
+import { comment_button } from './comment.js'
+import { comment_delete } from "./deleteComment.js"
 
 // 영화 상세 페이지 정보 제공 함수
 // 라우터 구성이 되어있지 않기때문에 페이지 내의 데이터를 갈아 끼우는 방식으로 구현
@@ -41,27 +42,27 @@ export const show_details = (id) => {
                         </div>
                         <div id="movie-review">`;
 
-      let movieid_comment = JSON.parse(
-        window.localStorage.getItem(`${id}_comment`)
-      );
+
+      let movieid_comment = JSON.parse(window.localStorage.getItem(`${id}_comment`))
       if (movieid_comment) {
         movieid_comment.forEach((comment) => {
-          temp_html =
-            temp_html +
-            `<div class="comment">${comment["comment"]} - ${comment["name"]}님</div>`;
+          temp_html = temp_html + `<li class="comment">${comment['comment']} - ${comment['name']}님
+          <button id="deleteBtn" onclick="comment_delete(event,'${id}','${comment['pwd']}')" >삭제</li>`
         });
       }
 
-      temp_html =
-        temp_html +
-        `<div>
+      temp_html = temp_html + `<div>
+                    <div>
                     <input id="comment-name" type="text" name="name" placeholder="닉네임">
                     <input id="comment-pwd" type="password" name="pwd" placeholder="비밀번호">
                     <textarea id="comment-body" placeholder="한 줄 평을 입력해 주세요"></textarea>
+                    </div>
                     <button onclick="comment_button('${id}')">작성
-                  </div>
+                    </div>
+                    </div>
                 </div>`;
       movie_list.innerHTML = temp_html;
     })
     .catch((err) => console.error(err));
 };
+
