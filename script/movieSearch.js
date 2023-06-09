@@ -1,9 +1,16 @@
+import { show_details } from "./movieDetail.js";
+
 // 영화 검색기능 함수
 export const search_movie = () => {
   // 검색할 영화 제목을 query string으로 서버로 전송해야 하기 때문에,
   // query에 영화 제목을 담기 위해 상수로 선언 후 input태그 속의 값을 할당해줌
   // 할당한 경로?가 바뀔 일은 없기 떄문에 변수 대신 상수로 선언
   const search_keyword = document.querySelector("#keyword").value;
+
+  if (search_keyword.length === 0) {
+    alert('검색어를 입력해 주세요');
+    window.location.reload()
+  }
 
   const options = {
     method: "GET",
