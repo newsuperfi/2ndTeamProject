@@ -1,7 +1,18 @@
+import { show_details } from "./movieDetail.js";
+
 export const comment_button = (id) => {
   const comment_name = document.querySelector("#comment-name").value;
   const comment_pwd = document.querySelector("#comment-pwd").value;
   const comment_body = document.querySelector("#comment-body").value;
+
+
+  if(comment_name.length === 0) {
+    alert('닉네임을 입력해 주세요');
+  } else if (comment_pwd.length === 0) {
+    alert('비밀번호를 입력해 주세요');
+  } else if (comment_body.length === 0) {
+    alert('리뷰 내용을 입력해 주세요');
+  } else {
 
   const comment_init = [];
   const temp_comment = {
@@ -33,6 +44,7 @@ export const comment_button = (id) => {
   }
   show_details(id);
 };
+}
 
 export const show_comment = (id) => {
   let movieid_comment = JSON.parse(
